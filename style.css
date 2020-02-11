@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: #F5CAC3;
+    background: #FFFFFF;
+}
+
+header {
+
+    margin: 0;
+    height: 80px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h2 {
+    font-family: sans-serif;
+    color: black;
+}
+
+nav {
+    height: 80px;
+    background: black;
+}
+
+ul {
+    padding: 0;
+    padding-top: 33px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+
+}
+
+nav li {
+    list-style-type: none;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    cursor: pointer;
+
+}
+
+nav li:hover {
+    font-weight: bold;
+
+}
+
+h3 {
+    text-align: center;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2rem;
+    margin: 1rem 5rem;
+}
+
+main > article {
+    text-align: center;
+    box-shadow: ;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-flow: column;
+    box-shadow: 0px 0px 40px 3px rgba(0, 0, 0, 0.8);
+    font-family: sans-serif;
+}
+
+main > article:hover {
+
+}
+
+article img {
+    align-self: center;
+    max-width: 225px;
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+
+main > .deal {
+    box-shadow: 0px 0px 40px 10px rgba(231, 166, 26, 1);
+}
+
+main > .soldout {
+    color: rgba(0, 0, 0, 0.5);
+    filter: grayscale(100%);
+}
+
+button {
+    color: white;
+    background-color: black;
+    border-radius: 1rem;
+    width: 70%;
+    padding: 0.5rem;
+    align-self: center;
+    margin-top: auto;
+    cursor: pointer;
+}
+
+.soldout button {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+article h4{
+    cursor: pointer;
+}
+article h4,
+article h5 {
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+
+.old-price {
+    margin: 0;
+    margin-top: 1rem;
+    text-decoration: line-through;
+    color: darkred;
+}
+
+.deal h5 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+footer {
+    height: 80px;
+    background: black;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+
+
+}
+
+footer p {
+    color: white;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    margin: 1rem;
+    align-self: center;
+    text-align: center;
+    cursor: pointer;
+}
