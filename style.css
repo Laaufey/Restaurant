@@ -18,13 +18,35 @@ header {
 h2 {
     font-family: sans-serif;
     color: black;
+    margin-top: 2rem;
+    text-transform: uppercase;
+
 }
 
 nav {
-    height: 80px;
     background: black;
+    display: flex;
+    flex-direction: column;
+/*justify-content:space-between*/
 }
 
+nav a{
+    padding: 1rem;
+    display: block;
+    text-decoration: none;
+}
+
+nav a:hover{
+/*    display: block;*/
+    background: hotpink
+}
+a{
+    color: white;
+    font-family: sans-serif;
+    text-transform: uppercase;
+
+}
+/*
 ul {
     padding: 0;
     padding-top: 33px;
@@ -47,32 +69,22 @@ nav li:hover {
 
 }
 
+*/
 h3 {
     text-align: center;
     font-family: sans-serif;
     padding: 20px;
 }
 
-main {
+section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 2rem;
     margin: 1rem 5rem;
 }
 
-main > article {
-    text-align: center;
-    box-shadow: ;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    display: flex;
-    flex-flow: column;
-    box-shadow: 0px 0px 40px 3px rgba(0, 0, 0, 0.8);
-    font-family: sans-serif;
-}
-
-main > article:hover {
-
+section > h2{
+    grid-column: 1/-1;
 }
 
 article img {
@@ -80,15 +92,6 @@ article img {
     max-width: 225px;
     padding-bottom: 1rem;
     cursor: pointer;
-}
-
-main > .deal {
-    box-shadow: 0px 0px 40px 10px rgba(231, 166, 26, 1);
-}
-
-main > .soldout {
-    color: rgba(0, 0, 0, 0.5);
-    filter: grayscale(100%);
 }
 
 button {
@@ -101,17 +104,19 @@ button {
     margin-top: auto;
     cursor: pointer;
 }
+article{
+    text-align: center;
+    display: flex;
+    flex-flow:column;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+}
 
-.soldout button {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-article h4{
-    cursor: pointer;
-}
 article h4,
 article h5 {
     text-transform: uppercase;
     margin: 1rem 0;
+    font-family: sans-serif;
 }
 
 .old-price {
@@ -121,18 +126,12 @@ article h5 {
     color: darkred;
 }
 
-.deal h5 {
-    margin: 0;
-    margin-bottom: 1rem;
-}
 
 footer {
     height: 80px;
     background: black;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-
-
 }
 
 footer p {
@@ -144,3 +143,37 @@ footer p {
     text-align: center;
     cursor: pointer;
 }
+
+/*
+article {
+    text-align: center;
+    box-shadow: ;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-flow: column;
+    box-shadow: 0px 0px 40px 3px rgba(0, 0, 0, 0.8);
+    font-family: sans-serif;
+    margin: 1rem 0;
+}
+
+.deal {
+    box-shadow: 0px 0px 40px 10px rgba(231, 166, 26, 1);^
+
+}
+
+.soldout {
+    color: rgba(0, 0, 0, 0.5);
+    filter: grayscale(100%);
+}
+
+.soldout button {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+article h4{
+    cursor: pointer;
+}
+
+
+
+*/
