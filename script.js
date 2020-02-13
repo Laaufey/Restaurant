@@ -1,13 +1,38 @@
+fetch("https://kea-alt-del.dk/t5/api/categories")
+    .then(res => res.json())
+    .then(createCategories)
 
-fetch("https://kea-alt-del.dk/t5/api/productlist")
-    .then(function (response) {
-        return response.json()
+function createCategories(data) {
+    console.log(data)
+    data.forEach(function (oneCat) {
+
+        const a = document.createElement("a");
+        a.setAttribute("href", `#${oneCat}`);
+        document.querySelector("nav").appendChild(a);
+        a.textContent=oneCat;
+
+        const section = document.createElement("section");
+        section.id = oneCat;
+        const h2 = document.createElement("h2");
+        h2.textContent = oneCat;
+        section.appendChild(h2);
+
+        document.querySelector("main").appendChild(section);
+
     })
-    .then(function (data) {
-        showData(data)
-    })
+    getProducts();
+}
 
+function getProducts() {
+    fetch("https://kea-alt-del.dk/t5/api/productlist")
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            showData(data)
+        })
 
+}
 
 function showData(jsonData) {
     jsonData.forEach(showDish)
@@ -48,7 +73,9 @@ function showDish(dish) {
 
     //const parent = document.querySelector("main");
     //parent.appendChild(clone);
-    document.querySelector("main").appendChild(clone);
+
+   // document.querySelector("main").appendChild(clone);
+    document.querySelector(`#${dish.category}`).appendChild(clone);
 }
 
 
